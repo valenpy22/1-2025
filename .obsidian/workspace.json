@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "e924ecaa1eae70f0",
+    "type": "split",
+    "children": [
+      {
+        "id": "97f12ec9771a3cd6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2d6abb6800899340",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Introducción a Arquitectura de Datos/1. Clase 19-03.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1. Clase 19-03"
+            }
+          },
+          {
+            "id": "6d6680d8345a2f19",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Introducción a Arquitectura de Datos/2. Clase 19-03.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2. Clase 19-03"
+            }
+          },
+          {
+            "id": "8f1ff3b4800d6b73",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Introducción a Arquitectura de Datos/3. Resumen capítulo 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3. Resumen capítulo 1"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "12d9193d4a88f675",
+    "type": "split",
+    "children": [
+      {
+        "id": "c5f84487dbe15676",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f465acefe18ef560",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "712570e09cd1b879",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "4d5231554c06fe4e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "1e775d6f9cb2d816",
+    "type": "split",
+    "children": [
+      {
+        "id": "0f7a6b3ccd9e0d53",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a2f0f61ee14307e0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Introducción a Arquitectura de Datos/2. Clase 19-03.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de 2. Clase 19-03"
+            }
+          },
+          {
+            "id": "7453739570a6501e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Introducción a Arquitectura de Datos/2. Clase 19-03.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de 2. Clase 19-03"
+            }
+          },
+          {
+            "id": "1a5dc5dd7c7ad46f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "aae276261db219dd",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Introducción a Arquitectura de Datos/2. Clase 19-03.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de 2. Clase 19-03"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "8f1ff3b4800d6b73",
+  "lastOpenFiles": [
+    "Introducción a Arquitectura de Datos/2. Clase 19-03.md",
+    "Introducción a Arquitectura de Datos/3. Resumen capítulo 1.md",
+    "Taller de DevSecOps/2. Clase 19-03.md",
+    "Taller de DevSecOps/1. Clase 18-03.md",
+    "Introducción a Arquitectura de Datos/1. Clase 19-03.md",
+    "Bienvenido.md",
+    "Introducción a Arquitectura de Datos",
+    "Taller de DevSecOps"
+  ]
+}
