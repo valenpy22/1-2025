@@ -41,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Aprendizaje Automático/Teoría.md",
+                "file": "Seguridad en Redes/Teoría.md",
                 "mode": "source",
                 "source": false
               },
@@ -107,7 +107,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "1e775d6f9cb2d816",
@@ -199,8 +200,13 @@
   },
   "active": "8f1ff3b4800d6b73",
   "lastOpenFiles": [
-    "Introducción a Arquitectura de Datos/4. Clase 26-03.md",
+    "Ciberseguridad/Estudio propio/Herramientas a investigar.md",
+    "Seguridad en Redes/Teoría.md",
+    "Ciberseguridad/Estudio propio",
+    "Ciberseguridad/PortSwigger/1. SQL Injection.md",
     "Aprendizaje Automático/Teoría.md",
+    "Ciberseguridad/PortSwigger",
+    "Introducción a Arquitectura de Datos/4. Clase 26-03.md",
     "Aprendizaje Automático",
     "Introducción a Arquitectura de Datos/3. Resumen capítulo 1.md",
     "Introducción a Arquitectura de Datos/2. Clase 19-03.md",
