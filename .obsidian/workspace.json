@@ -41,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Seguridad en Redes/Teoría.md",
+                "file": "Aprendizaje Automático/Teoría.md",
                 "mode": "source",
                 "source": false
               },
@@ -107,8 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "1e775d6f9cb2d816",
@@ -200,10 +199,25 @@
   },
   "active": "8f1ff3b4800d6b73",
   "lastOpenFiles": [
-    "Ciberseguridad/Estudio propio/Herramientas a investigar.md",
-    "Seguridad en Redes/Teoría.md",
-    "Ciberseguridad/Estudio propio",
+    "Aprendizaje Automático/Imágenes",
+    "Aprendizaje Automático/Imágenes/Pasted image 20250401103658.png",
+    "Aprendizaje Automático/Imágenes/Pasted image 20250401103312.png",
+    "Aprendizaje Automático/Imágenes/Pasted image 20250401102845.png",
+    "Aprendizaje Automático/Imágenes/Pasted image 20250401101412.png",
+    "Aprendizaje Automático/Imágenes/Pasted image 20250401101341.png",
     "Ciberseguridad/PortSwigger/1. SQL Injection.md",
+    "Ciberseguridad/PortSwigger/10. Server-side template injection.md",
+    "Ciberseguridad/PortSwigger/9. OS command injection.md",
+    "Ciberseguridad/PortSwigger/8. HTTP request smuggling.md",
+    "Ciberseguridad/PortSwigger/7. Server-side request forgery (SSRF).md",
+    "Ciberseguridad/PortSwigger/6. Cross-origin resource sharing (CORS).md",
+    "Ciberseguridad/PortSwigger/5. DOM-based vulnerabilities.md",
+    "Ciberseguridad/PortSwigger/4. Clickjacking.md",
+    "Ciberseguridad/PortSwigger/3. Cross-site request forgery (CSRF).md",
+    "Ciberseguridad/PortSwigger/2. Cross-site scripting.md",
+    "Seguridad en Redes/Teoría.md",
+    "Ciberseguridad/Estudio propio/Herramientas a investigar.md",
+    "Ciberseguridad/Estudio propio",
     "Aprendizaje Automático/Teoría.md",
     "Ciberseguridad/PortSwigger",
     "Introducción a Arquitectura de Datos/4. Clase 26-03.md",
