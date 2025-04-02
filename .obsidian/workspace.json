@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Aprendizaje Automático/Teoría.md",
+                "file": "Introducción a Arquitectura de Datos/7. Snowflake.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Teoría"
+              "title": "7. Snowflake"
             }
           }
         ],
@@ -199,6 +199,24 @@
   },
   "active": "8f1ff3b4800d6b73",
   "lastOpenFiles": [
+    "Introducción a Arquitectura de Datos/Snowflake paper.pdf",
+    "Introducción a Arquitectura de Datos/6. Resumen.md",
+    "Introducción a Arquitectura de Datos/7. Snowflake.md",
+    "Introducción a Arquitectura de Datos/4. Clase 26-03.md",
+    "Ciberseguridad/Estudio propio/Guía de Hacking Ético.md",
+    "Ciberseguridad/Estudio propio/Evaluación de Seguridad en Páginas Web.md",
+    "Introducción a Arquitectura de Datos/5. Resumen capítulo 2.md",
+    "Gobernanza y Gestión TI/GYGTI 202501 - Anexo 02 - Estructuras Organizativas.pdf",
+    "Gobernanza y Gestión TI/GYGTI 202501 - Anexo 01 - Metas de la Empresa y de Alineamiento.pdf",
+    "Gobernanza y Gestión TI/GYGTI 202501 - 03 - Entregar, Dar Servicio y Soporte.pdf",
+    "Gobernanza y Gestión TI/GYGTI 202501 - 02 - Introducción al Gobierno TI.pdf",
+    "Gobernanza y Gestión TI/GYGTI 202501 - 01 - Introducción a la Asignatura.pdf",
+    "Introducción a Arquitectura de Datos/1. Clase 19-03.md",
+    "Introducción a Arquitectura de Datos/2. Clase 19-03.md",
+    "Taller de DevSecOps/4. Clase 01-04.md",
+    "Taller de DevSecOps/2. Clase 19-03.md",
+    "Taller de DevSecOps/3. Clase 26-03.md",
+    "Aprendizaje Automático/Teoría.md",
     "Aprendizaje Automático/Imágenes",
     "Aprendizaje Automático/Imágenes/Pasted image 20250401103658.png",
     "Aprendizaje Automático/Imágenes/Pasted image 20250401103312.png",
@@ -216,26 +234,11 @@
     "Ciberseguridad/PortSwigger/3. Cross-site request forgery (CSRF).md",
     "Ciberseguridad/PortSwigger/2. Cross-site scripting.md",
     "Seguridad en Redes/Teoría.md",
-    "Ciberseguridad/Estudio propio/Herramientas a investigar.md",
     "Ciberseguridad/Estudio propio",
-    "Aprendizaje Automático/Teoría.md",
     "Ciberseguridad/PortSwigger",
-    "Introducción a Arquitectura de Datos/4. Clase 26-03.md",
     "Aprendizaje Automático",
     "Introducción a Arquitectura de Datos/3. Resumen capítulo 1.md",
-    "Introducción a Arquitectura de Datos/2. Clase 19-03.md",
-    "Introducción a Arquitectura de Datos/5. Resumen capítulo 2.md",
-    "Taller de DevSecOps/3. Clase 26-03.md",
-    "Taller de DevSecOps/2. Clase 19-03.md",
     "Gobernanza y Gestión TI",
-    "Seguridad en Redes",
-    "Ciberseguridad/Hack The Box/Responder.md",
-    "Ciberseguridad/Hack The Box/General.md",
-    "Ciberseguridad/Hack The Box/Untitled",
-    "Taller de DevSecOps/1. Clase 18-03.md",
-    "Introducción a Arquitectura de Datos/1. Clase 19-03.md",
-    "Bienvenido.md",
-    "Introducción a Arquitectura de Datos",
-    "Taller de DevSecOps"
+    "Ciberseguridad/Hack The Box/Responder.md"
   ]
 }
