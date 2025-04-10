@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introducción a Arquitectura de Datos/7. Snowflake.md",
+                "file": "Aprendizaje Automático/Teoría.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "7. Snowflake"
+              "title": "Teoría"
             }
           }
         ],
@@ -199,9 +199,14 @@
   },
   "active": "8f1ff3b4800d6b73",
   "lastOpenFiles": [
+    "Pasted image 20250410100232.png",
+    "Introducción a Arquitectura de Datos/8. Clase 3.md",
+    "Aprendizaje Automático/Imágenes/Pasted image 20250408100804.png",
+    "Introducción a Arquitectura de Datos/7. Snowflake.md",
+    "Aprendizaje Automático/Teoría.md",
+    "Seguridad en Redes/Teoría.md",
     "Introducción a Arquitectura de Datos/Snowflake paper.pdf",
     "Introducción a Arquitectura de Datos/6. Resumen.md",
-    "Introducción a Arquitectura de Datos/7. Snowflake.md",
     "Introducción a Arquitectura de Datos/4. Clase 26-03.md",
     "Ciberseguridad/Estudio propio/Guía de Hacking Ético.md",
     "Ciberseguridad/Estudio propio/Evaluación de Seguridad en Páginas Web.md",
@@ -216,7 +221,6 @@
     "Taller de DevSecOps/4. Clase 01-04.md",
     "Taller de DevSecOps/2. Clase 19-03.md",
     "Taller de DevSecOps/3. Clase 26-03.md",
-    "Aprendizaje Automático/Teoría.md",
     "Aprendizaje Automático/Imágenes",
     "Aprendizaje Automático/Imágenes/Pasted image 20250401103658.png",
     "Aprendizaje Automático/Imágenes/Pasted image 20250401103312.png",
@@ -233,12 +237,9 @@
     "Ciberseguridad/PortSwigger/4. Clickjacking.md",
     "Ciberseguridad/PortSwigger/3. Cross-site request forgery (CSRF).md",
     "Ciberseguridad/PortSwigger/2. Cross-site scripting.md",
-    "Seguridad en Redes/Teoría.md",
     "Ciberseguridad/Estudio propio",
     "Ciberseguridad/PortSwigger",
     "Aprendizaje Automático",
-    "Introducción a Arquitectura de Datos/3. Resumen capítulo 1.md",
-    "Gobernanza y Gestión TI",
-    "Ciberseguridad/Hack The Box/Responder.md"
+    "Introducción a Arquitectura de Datos/3. Resumen capítulo 1.md"
   ]
 }

@@ -138,4 +138,113 @@ Esto se traduce en una capacidad muy débil de generalización.
 ## Subajuste vs Sobreajuste
 ![[Pasted image 20250401103658.png]]
 
+## Preguntas por responder para la prueba: Importante
 ¿Cuáles son las consecuencias de un alto bias? ¿Cuáles son las consecuencias de tener un modelo sorbeajustado? ¿Qué consecuencias hay si los parámetros no están optimizados para el modelo? 
+
+# Clase 6
+## Matriz de confusión
+![[Pasted image 20250408100804.png]]
+
+- Error rate = (FN+FP)/N
+- Recall = TP / (TP+FN)
+- Precision = TP/(TP+FP)
+- Specificity = TN/(TN+FP)
+- False alarm rate = FP/(FP+TN) = 1 - Specificity
+
+## Curva ROC
+
+## Evaluación de modelos
+### De clasificación
+- **Test binomial**: Cuando tenemos un solo conjunto de entrenamiento y un solo conjunto de evaluación.
+- **Test normal aproximado**: Se trabaja con la mediana y varianza.
+- **T-test**: Varios conjuntos de entrenamiento y de evaluación.
+### Comparación de modelos de clasificación
+Quiero ver solamente MI modelo.
+- **Test McNemar**: Solo se tiene un conjunto de datos de entrenamiento y evaluación.
+- **T-test pareado con k-cross validation**: Varios conjuntos de entrenamiento comparados de par en par. Queremos probar que un modelo es mejor que otro independiente de la distribución.
+- **Análisis de varianza (ANOVA)**: Cuando no tenemos dos casos que comparar, sino que 3 o más. Compara todos estos modelos. Nos dice las diferencias significativas, si las hay se debe hacer de 2 en 2 la comparación para saber cuál es el mejor modelo. 
+
+### Comparación con múltiples datasets
+- **Comparar dos algoritmos**: Test de signo
+- **Comparar múltiples algoritmos**: Test de Kruskal-Wallis
+
+# Clase 7
+## Ensemble Learning
+Combina múltiples clasificadoress (usualmente con fortalezas distintas) para construir un clasificador más grande y mejor.
+
+Cuanado hablamos de un aprendizaje ensamblado, tendremos muchos clasificadores. Necesitamos una estrategia de todos los modelos para que solamente salga un resultado, es decir, juntar las respuestas para generar una respuesta final.
+
+![[Pasted image 20250410100232.png]]
+
+## No Free Lunch Theorem
+No hay ningún algoritmo que sea siempre preciso.
+
+Generar un grupo de "aprendedores" base los cuales, al ser combinados, tienen una precisión más alta.
+
+Los diferentes agentes usan diferentes:
+- Algoritmos
+- Hiperparámetros
+- Representaciones (Modelos)
+- Conjuntos de entrenamiento
+- Subproblemas
+
+Un ejemplo, es cuando se hace una tomografía, radiografía y una ecotomografía sobre un mismo torso. Se le pasan los mismos datos, pero cada modelo tiene mayor conocimiento en un tema en específico.
+
+El usar diferentes conjuntos de entrenamiento, en promedio, son mejores que un solo clasificador.
+
+Los clasificadores de base son débiles.
+
+La idea es tener varios clasificadores débiles, y al momento de juntarlos, vamos a tener la garantía de que si todos tienen un rendimiento de más del 0.5, combinados serán mejor. 
+
+¿Por qué puede ser mejor? 
+Porque podemos hacer que cada uno de estos modelos debe tener un error, al juntarlos todos, el error es mucho más pequeño que la probabilidad de cualquier clasificador. 
+
+## Estrategias de combinación
+### Voting
+- Unanimidad: Deben ser todos iguales. 
+- Mayoría: El mayor entre dos opciones.
+- Pluralidad: El mayor entre varias opciones.
+
+Los votos pueden ser "pesados" por lo que algunos clasificadores podrían tener más influencia que otros. 
+
+Pero... ¿cómo podemos ponderar los votos de los diferentes clasificadores?
+Puede aprender la mejor forma de combinar clasificadores. Usa la salida del clasificador como características en un nuevo clasificador, aprende pesos para las características. A veces se le llama stacking. 
+
+Puede usar las etiquetas predichas como características, o las probabilidades/puntajes predichos. 
+
+Cuando tenemos muuuuchos clasificadores conviene hacer voto por mayoría.
+### Métodos sin aprender
+- Ponderar los votos según la confianza del clasificador: El puntaje o probabilidad, necesita ser el mismo tipo de clasificador en el "ensamblaje" para este ponderamiento para ser comparable entre clasificadores.
+- Ponderar los votos según la precisión del clasificador: Confía más en los clasificadores precisos.
+
+### Bagging
+Entrenar distintos clasificadores con distintos conjuntos de entrenamiento. 
+Este proceso es repetido K veces para crear K clasificadores.
+
+El proceso de sampling es llamado sampling de bootstrap. Tradicionalmente es usado para construir intervalos de confianza. 
+
+Ocupar bagging disminuye la varianza, pero no reduce el bias. Aún si los clasificadores individuales están sobreajustados, tienden a estar sobreajustados en diferentes maneras, entonces al final el ensamble reduce el sobreajuste. 
+Si los clasificadores individuales están subajustados debido al mismo bias, el ensamble también será subajustado. 
+### Feature Bagging
+Otra versión de baggin es samplear características de forma aleatoria (crear diferentes clasificadores en diferentes versiones del conjunto de características).
+Es decir, escojo ciertas características al azar para que las ocupe un clasificador. 
+
+## Boosting
+En vez de entrenar múltiples clasificadores de forma independiente, boosting funciona de forma iterativa. 
+En cada iteración, un nuevo clasificador es entrenado para intentar clasificar correctamente las instancias que el anterior clasificador erró.
+El nuevo clasificador puede que ahora tenga malo algunas instancias que el anterior clasificador calificó como correctas.
+La meta aquí es hacer que los clasificadores se comporten mejor en diferentes instancias.
+
+Usualmente los clasificadores en boosting son débiles, es decir, clasificadores que son ligeramente mejor que "tirar la moneda".
+
+Un clasificador débil es un "Decision stump", un árbol de decisión con solamente un nodo.
+
+#### ¿Por qué débiles en vez de fuertes?
+Principalmente por la eficiencia, boosting muestra que los clasificadores débiles son buenos, sin la necesidad de modelos grandes.
+Los clasificadores débiles también son más diversos, mejor para el ensamblaje.
+
+Se les pone un peso a los "datos malos" cuando pasa al siguiente clasificador, forzando a aprender los datos malos. El más potente es el clasificador de la última iteración.
+
+### AdaBoost
+Es un algoritmo de Boosting común.
+Usa todos los datos de entrenamiento en cada iteración, pero pesa las isntancias de entrenamiento de forma distinta en cada iteración, así el clasificador está "concetrado" en priorizar ciertas instancias como correctas sobre otros. 

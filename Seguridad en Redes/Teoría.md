@@ -69,3 +69,17 @@ Vector de ataque -> Ser humano
 8. Shouldersurfing: Ver por encima los datos personales (como en el metro)
 9. Baiting: Deja carnada (un pendrive)
 10. Tailgaiting: Como cuando dos personas pasan en el metro.
+
+
+# Clase 2
+## Entropía
+Según el NIST, la entropía de una contraseña debe tener como mínimo 112 bits.
+
+Entroía del caracter
+log(2)(94) = 6,55 x 17 = 112,35 (17 caracteres de solo combinación de teclado)
+log(2)(10) = 3,5 x 32 = 120 + otro factor (MFA)
+
+La política lleva a normas, y la norma a procedimientos concretos.
+
+## VPN (Virtual Private Network)
+Tecnología que permite crear una conexión segura sobre una red menos segura entre tu computadora e internet. 
