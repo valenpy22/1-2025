@@ -83,3 +83,67 @@ La política lleva a normas, y la norma a procedimientos concretos.
 
 ## VPN (Virtual Private Network)
 Tecnología que permite crear una conexión segura sobre una red menos segura entre tu computadora e internet. 
+
+# Clase 3
+## Funciones hash
+MD5, SHA1, SHA2, SHA3.
+
+```bash
+Get-FileHash -Algorithm md5 .\1.txt  # 148
+Get-FileHash -Algorithm sha1 .\1.txt # Más robusta, 160
+Get-FileHash -Algorithm sha512 .\1.txt # Mucho más robusta
+Get-FileHash -Algorithm RIPEMD160 .\1.txt # Más robusta, 160
+```
+
+El hash no cambia si es que se mantiene el contenido y se cambia el nombre del archivo. 
+
+Mientras más alto sea el número del sha, más complejo será la encriptación.
+### Fips202
+
+### Shake hash
+Sirve para IoT o para sensores, es liviano, no requiere tantos recursos. 
+
+### Tiger
+### Blake3
+
+## Endianness
+Se refiere al formtato en que se almacenan los datos de más de un byte en un ordenador.
+### Little endian
+Formato de orden de bytes en memoria, tomando el byte menos significativo primero.
+
+### Big endian
+Formato de orden de bytes en memoria, tomando el byte más significativo primero.
+
+## Ofuscación
+Técnica de protección de software que dificulta la lectura y comprensión del código fuente.
+
+## God killer
+Envía SMS automatizados de forma rápida.
+
+## Salt
+Cadena aleatoria que se agrega al dato original antes de calcular el hash, para evitar que dos usuarios con la misma contraseña tengan el mismo hash, y aumentar entropía y unicidad.
+Tiene entre 8 y 16 caracteres.
+```bash
+mkpasswd -m sha-512 # Se ingresa una contraseña y se generará un hash automáticamente
+```
+
+### NeuralHash collisions
+Técnica desaarrollada por Apple que intenta identificar imágenes semánticamente similares, usando una red neuronal que produce un hash basado en características visuales de la imagen.
+```
+python nnhash.py cat.pbg
+```
+
+## Key Derivation Function
+Un KDF toma como entrada una contraseña (o clave base) y otros parámetros como una sal y un contador de iteraciones, y produce una clave criptográfica adecuada para ser usada en cifrado, autenticación u otras operaciones criptográficas.
+
+### PBKDF2
+Password Based Key Derivation Function 2 es una functión criptográfica que convierte una contraseña en una clave segura, usando una función hash, una sal aleatoria, iteraciones.
+
+## Light Weight Cryptography Environment
+SHAKE proporciona un excelente recurso, es eficiente con el consumo de energía, ya que no requiere grandes recursos lógicos ni físicos.
+
+### Imphash
+Es una técnica en la que los valores hash se calculan basándose en los nombres de las bibliotecas/funciones importadas y su orden particular dentro del ejecutable. Especial para análisis forense y detección de malware en ejecutables. 
+
+### Humanhash
+Facilita que un usuario pueda leer un hash.

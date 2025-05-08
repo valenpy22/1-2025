@@ -248,3 +248,224 @@ Se les pone un peso a los "datos malos" cuando pasa al siguiente clasificador, f
 ### AdaBoost
 Es un algoritmo de Boosting común.
 Usa todos los datos de entrenamiento en cada iteración, pero pesa las isntancias de entrenamiento de forma distinta en cada iteración, así el clasificador está "concetrado" en priorizar ciertas instancias como correctas sobre otros. 
+
+# Clase 8
+## Modelos monolíticos vs embedidos
+Se tienen 6 empresas que en el pasado han predecido correctamente:
+- 70%
+- 75%
+- 70%
+- 60%
+- 75%
+- 65%
+De las veces. 
+
+Dado el gran espectro de posibilidades, se puede combinar toda la información y hacer una decisión informada.
+Asumiendo que los 6 expertos verifican que es una buena decisión (asumiendo que son independientes uno del otro), se obtiene una tasa de precisión combinada de 
+= 1 - (30% x 25% x 30% x 40% x 25% x 35%)
+= 1 - 0.07875 
+= 99.92125%
+
+Si combinamos la opinión de varios expertos, podemos obtener un resultado muy potente. 
+
+## Ensamblado de modelos
+Combinación de conjuntos de modelos diversos, individuales y sencillos, ayudando que el modelo predictivo sea más potente.
+Da igual la cantidad de datos.
+
+### Preguntas importantes dadas por la profesora
+- ¿Cuándo sería ideal ocupar un ensamblaje de modelos? 
+- ¿Cuándo no ocupar un monolítico?
+- ¿Qué tiene que pasar con el otro clasificador para decir "no voy por aquí"?
+Cuando apesar de entrenar y entrenar, optimizar los hiperparámetros y darle más datos, el error sigue siendo alto. 
+Si no funciona con clustering, voy a ocupar otro modelo. Y luego, otro modelo, y otro modelo... O haceer combinaciones de modelos. 
+
+![[Pasted image 20250415101003.png]]
+
+## Ensamblaje
+- Usar múltiples algoritmos de aprendizaje
+- Combinar las decisiones
+- Puede ser más preciso que los clasificadores individuales
+- Generar un grupo de clasificadores simples
+- Aprendedores diferentes usan diferentes: algoritmos, hiperparámetros, representaciónes de los datos (ej: dar 5 características) y conjuntos de entrenamiento.
+
+Por ejemplo, si se decide ocupar diferentes representaciones de los datos, se pueden tomar las 20 características y se debe justificar la separación en grupos (por color, por tamaño, por forma). Puedo formar un clasificador pequeñito que solo sepa si una figura es una elipse.
+
+### Ensemble Creation Approaches
+- Voto sin ponderación
+- Voto con ponderación
+- Stacking
+
+## Bagging vs Boosting
+![[Pasted image 20250415101843.png]]
+
+De acuerdo como funcione ese modelo, se le asignan pesos a los datos. Mientras más avance secuencialmente, los datos en los que mayor error haya, más peso se le asigna, es decir, más importancia.
+
+## AdaBoost
+Se van a tener m datos de entrenamiento, las x son los datos y las "*y*" son las etiquetas.
+La distirbución va cambiando después de cada iteración.
+Cuando comienza, la importancia en el tiempo 1, todos los datos tendrán la misma importancia.
+
+La T son clasificadores binarios, que clasificará en -1 o +1.
+El clasificador h se entrena con los datos dados con importancia inicial.
+Después, se calcula el error. Es decir, el h(x) != y, se multiplica por el peso del dato y se hace una sumatoria de todos estos errores.
+Se escoge el alpha para saber la certeza del clasificador t. (Qué tan bueno es mi clasificador t).
+Luego, para cada dato se le calcula su peso nuevo en la siguiente iteración. 
+
+Luego de todas las iteraciones (H es el ensamble), se debe calcular una sumatoria ponderada de cada clasificador. Es decir, para cada clasificador, se multiplica por alfa y se suma todo esto. 
+
+- Requiere de clasificadores débiles.
+- Mientras más pequeño el error, mayor es el valor de alfa. Es decir, mientras más chico sea el error, más importancia se le dará a ese clasificador ya que responde bien. O al contrario, si aumenta el error, se le dará menor importancia, al responder mal.
+- Se debe entrenar al principio con cosas más fáciles para luego pasarle los ejemplos más difíciles.
+- Alfa es la importancia que se le da al modelo dependiendo de su error.
+- Se siguen manteniendo los mismos datos, solo cambian sus pesos.
+
+¿Cuándo ocupar Boosting?
+Cuando nuestro modelo tiene overfitting. 
+
+## Cascada
+Hay casos donde el modelo puede ser super potente, pero no es capaz de resolver problemas muy específicos. 
+Consiste en hacer una cascada de clasificadores, asociados a una confianza w.
+
+![[Pasted image 20250415103904.png]]
+
+Se definen diferentes umbrales $\theta$. Si es mayor que el umbral, se considera ese modelo. Si no, se continua. 
+Con esto se generan "reglas".
+
+## Stacking
+Algoritmo de aprendizaje automático ensamblado. 
+Se trata de combinar las predicciones de mútliples modelos de aprendizaje automático del mismo conjunto de datos, como bagging y boosting. 
+
+Es decir, para la salida se define otro modelo de predicciones, en vez de votos ponderados.
+Luego, se tiene otro nivel que aprende a predecir la salida de un ensamble en base de clasificadores base. 
+
+### Nivel 0 (Modelo base)
+Se ajustan a los datos de entrenamientos.
+
+### Nivel 1 (Modelo meta)
+Modelo que aprende a cćomo es mejor combinar las predicciones de los modelos base. 
+
+Ajusta sus parámetros en base a las predicciones de los modelos simples. 
+
+## Combinación de diferentes fuentes
+- Integración temprana: Se ocupan todas las características y datos para entrenar un modelo. Mezclo todo.
+- Integración tardía: Se les dan datos distintos a los modelos. Los clasificadores están separados. Se combinan datos finales.
+- Integración intermedia: Se le pueden dar datos combinados, se le da el mismo clasificador pero con distintos hiperparámetros. 
+
+## Ensamble
+Es importante:
+- Seleccionar los subconjuntos: Cómo separar características de los datos, tener en cuenta sesgos
+- Entrenamiento de metaclasificadores: Ver clasificadores correlacionados, extraer nuevas combinaciones de los que no están correlacionados. 
+
+# Clase 9
+## SVM
+- Support Vector Machine. Es un algoritmo de aprendizaje automático supervisado que puede ser usado para desafíos de clasificación o regresión.
+- En este algoritmo, se grafica cada ítem de dato como un punto en un espacio n-dimensional (donde n es el número de características que se tienen) con el valor de cada característica siendo el valor de una coordenada en particular.
+- Entonces, se realiza una clasificación encontrando el hiperplano que diferencie las dos clases de gran manera. Es decir, por default es un clasificador binario.
+- Puede manejar fácilmente variables continuas y categóricas.
+- SVM construye un hiperplano en un espacio multidimensional para separar diferentes clases. Genera un hiperplano óptimo de una manera iterativa, el cuál es usado para minimizar un error.
+- La idea central de SVM es encontrar un hiperplano máximo marginal (MMH) que mejor divida el conjunto de datos en clases.
+
+## Vectores de decisión o de soporte
+- Son aquellos datos que están muy cerca de la otra clase. 
+- Trata de maximizar el margen que hay desde el hiperplano a las clases que hay.
+
+![[Pasted image 20250422101251.png]]
+
+## Definiciones
+### Vectores de soporte
+Son puntos de datos, los cuales son los que están más cerca al hiperplano. Estos puntos definirán la mejor línea separadora para calcular los margenes. Estos puntos son más relevantes para la construcción del clasificador.
+
+### Hiperplano
+Plano de decisión que separa entre un conjunto de objetos que tienen diferentes clases.
+
+### Margen
+Es un espacio entre dos líneas de los vectores de soporte.
+Es calculado como la distancia perpendicular desde un vector de soporte al hiperplano.
+Si el margen es más grande entre las clases, entonces es considerado un buen margen. Si es pequeño, es un mal margen porque se puede confundir entre ambas clases.
+
+## ¿Cómo funciona SVM?
+El objetivo principal es segregan el conjunto de datos dado en la mejor manera posible.
+El objetivo es seleccionar un hiperplano con el mayor margen posible entre los vectores de soporte. Lo hace siguiendo los siguientes pasos:
+- Genera hiperplanos los cuales segregan las clases en la mejor manera.
+- Selecciona el hiperplano correcto con la máxima segregación desde los puntos de datos.
+
+### Tip
+Se define una mejor clasificación cuando el margen es mayor.
+
+## ¿Cuándo SVM no funciona?
+### Clases no separables linealmente
+Cuando tenemos clases no separables linealmente. Es decir, tanto de la clase positiva como de la negativa están mezclados, sin definirse una separación lineal o aparente. 
+
+En este caso, se debe minimizar la sumatoria de los errores generados y multiplicarlo por C. El valor de C depende de qué tan estricto se quiere ser con respecto a la clasificación.
+
+### Planos no separables linealmente
+- Se deben separar por dimensiones, llamado Kernel Trick. 
+
+![[Pasted image 20250422103551.png]]
+
+El algoritmo SVM es implementado usando un kernel.
+
+## Tipos de kernels
+- Kernel lineal
+- Kernel polinomial
+- Radial Basis Function Kernel
+- Kernel sigmoide
+
+### Radial Basis Function Kernel
+Utiliza un parámetro gamma entre 0 y 1, usando una extrapolación de los datos originales en un espacio infinito. 
+
+## SVM Multi-clase
+### One vs One
+Sean Q clases, se requiere construir tantos modelos svm como pares existan. 
+Cada SVM vota por una clase. La clase se determina como aquella con máximo score agregado. 
+
+### One vs All
+Sean Q clases, se requiere construir Q modelos.
+La clase se determina como aquella con máximo score. Se van cambiando la clase de cada uno para volverlo a un problema binario. 
+
+Para el laboratorio debemos hacer un SVM multi-clase. Quick Draw dataset. 
+Informe de 4 páginas, vale el 60%. El 40% es el código.
+
+## Análisis crítico
+¿Cómo afecta el valor de C en el entrenamiento?
+- C muy chico (ej C=0.0001)
+- C "normal" (ej C=10)
+- C muy grande (ej C=10000)
+¿Cuál es la relación entre C y el sobreajuste a los datos de entrenamiento?
+
+# Clase 10
+## Árboles de decisión
+Modelo jerárquico para aprendizaje supervisado en donde regiones discriminantes son identificadas en una secuencia sucesiva de divisiones. Sigue la estrategia de Divide y Conquista.
+### Nodos internos
+- Univariado: Usa un único atributo para cada split, puede ser numérico o discreto.
+- Multivariado: Usa todos los atributos para estimar split.
+
+### Hojas
+- Clasificación: Cada hoja representa una clase.
+- Regresión: Numérico; promedio, o ajuste local.
+
+### Aprendizaje
+Construcción del árbol, el cual sigue un algoritmo greedy para encontrar el mejor split recursivamente.
+
+![[Pasted image 20250424100935.png]]
+
+### Input
+Conjunto de entrenamiento.
+
+### Split
+Si la entropía es 0, no hay incertidumbre.
+
+## Random Forest
+Método de ensamblaje específicamente diseñaado para los clasificadores de árboles de decisión.
+
+- Ocupa Bagging (elige al azar cuáles datos se van a ocupar y puede volver a ocupar esos datos) y Random Input Vectors.
+- Método de vectores aleatorios, por cada nodo, se escoge el mejor split de un ejemplo random de m atributos en vez de toods los atributos.
+
+¿Cuántos árboles ocupar? ¿Es mejor 3, 100 o 1000?
+Depende de cómo sean los datos, del problema y cuántos errores se permiten en el problema.
+
+Idóneo para trabajar con multiclase.
+
+Mientras más profundidad tenga el árbo, más overefitting hay. 
+
+
