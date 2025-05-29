@@ -152,4 +152,32 @@ Tiene 3 componentes clave
 	Como se tienen muchas neuronas, se puede sacar provecho de ellas. Ninguna neurona por sí sola "soluciona" todo, los grupos de neuronas trabajan juntas.
 
 ¿qué problema quiero resolver con el paper? este es el modelo, estos son los datos, estas son las métricas.
-Esto debe estar en la presentación
+Esto debe estar en la presentación 
+Cuántos parámetros tiene el modelo, la idea es bajar la cantidad de parámetros que tiene que aprender la máquina.
+
+# Modelos convolucionales
+## ¿Cómo funciona CNN?
+Para entenderlo usaremos un ejemplo donde se le pasa una imagen a un modelo y debe determinar si es una equis o un círculo.
+
+## Tipos de capas
+### Convolución
+Imagen x kernel = Resultado
+Una imagen se convierte en un stack de imágenes filtradas.
+### Pooling
+Se va escogiendo el mayor valor de cada grupo de píxels.
+### Normalización
+Si es mayor a 0, se considera. Si es negativo, se reemplaza por 0.
+### Full connection
+Cada valor obtiene un voto. El voto depende de qué tan seguro un valor predice X o O.
+## Deep stacking
+Las salidas de una capa se convierten en las entradas de la siguiente. Esto puede llevar a que cada capa pueda ser repetida varias veces.
+
+## Hiperparámetros
+- Convolución: Cantidad de características y tamaño
+- Pooling: Tamaño de la ventana y de salto
+- Fully connected: Cantidad de neuronas
+- Arquitectura: ¿Cuántos tipos de cada capa? ¿En qué orden?
+
+### Data Augmentation
+Se trata de hacer transformaciones a la imagen (voltear, rotar, agrandar).
+

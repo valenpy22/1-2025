@@ -121,8 +121,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "1e775d6f9cb2d816",
@@ -214,6 +213,9 @@
   },
   "active": "1b03ade35ba2b44a",
   "lastOpenFiles": [
+    "Introducción a Arquitectura de Datos/PEP 2/Teoría.md",
+    "Aprendizaje Automático/PEP 2/Teoría.md",
+    "Introducción a Arquitectura de Datos/PEP 2",
     "Ciberseguridad/Curso Udemy/Resumen.md",
     "Pasted image 20250521114849.png",
     "Pasted image 20250518104621.png",
@@ -231,7 +233,6 @@
     "Introducción a Arquitectura de Datos/PEP 1/3. Resumen.md",
     "Introducción a Arquitectura de Datos/PEP 1/Teoría.md",
     "Introducción a Arquitectura de Datos/PEP 1/Presentaciones.md",
-    "Aprendizaje Automático/PEP 2/Teoría.md",
     "Introducción a Arquitectura de Datos/PEP 1/2. Resumen capítulo 2.md",
     "Introducción a Arquitectura de Datos/PEP 1/Pasted image 20250511183240.png",
     "Introducción a Arquitectura de Datos/PEP 1/Snowflake paper.pdf",
@@ -257,7 +258,6 @@
     "Gobernanza y Gestión TI/GYGTI 202501 - Anexo 01 - Metas de la Empresa y de Alineamiento.pdf",
     "Gobernanza y Gestión TI/GYGTI 202501 - 03 - Entregar, Dar Servicio y Soporte.pdf",
     "Gobernanza y Gestión TI/GYGTI 202501 - 02 - Introducción al Gobierno TI.pdf",
-    "Gobernanza y Gestión TI/GYGTI 202501 - 01 - Introducción a la Asignatura.pdf",
     "Taller de DevSecOps/4. Clase 01-04.md"
   ]
 }
