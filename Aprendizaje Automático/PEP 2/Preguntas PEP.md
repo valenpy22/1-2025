@@ -1,0 +1,126 @@
+# 1. Preguntas básicas y de conceptos
+### 1. **¿Qué es una red neuronal artificial?**
+Una **red neuronal artificial** (ANN) es un modelo computacional inspirado en el cerebro humano, que está diseñado para reconocer patrones. Está compuesta por capas de nodos (neuronas) interconectados, donde cada conexión tiene un peso que se ajusta durante el entrenamiento. Las redes neuronales son capaces de aprender tareas como clasificación, regresión, reconocimiento de patrones y más, ajustando sus pesos a través de un proceso de entrenamiento basado en ejemplos.
+### 2. **¿Qué es un perceptrón?**
+El **perceptrón** es el modelo más simple de una red neuronal. Consiste en una sola capa de neuronas que toma un vector de entrada y produce una salida binaria, dependiendo de si el valor agregado supera un umbral. El perceptrón es una red neuronal de una sola capa, usada principalmente en problemas de clasificación binaria.
+### 3. **¿Qué es un MLP (Perceptrón Multicapa)?**
+El **Perceptrón Multicapa (MLP)** es una red neuronal con múltiples capas de neuronas, no solo una. Esto le permite resolver problemas no lineales, ya que las capas ocultas entre la entrada y la salida permiten aprender representaciones más complejas. Cada neurona en las capas ocultas transforma los datos de forma no lineal, lo que hace al MLP mucho más potente que un perceptrón simple.
+### 4. **¿Qué son las funciones de activación?**
+Las **funciones de activación** son funciones matemáticas que determinan si una neurona se activa o no. Son cruciales para introducir no linealidades en la red neuronal, lo que permite que la red aprenda patrones complejos. Algunas funciones de activación comunes son **sigmoide**, **ReLU**, **tanh** y **softmax**.
+### 5. **¿Qué es la retropropagación (backpropagation)?**
+La **retropropagación** es el algoritmo de aprendizaje utilizado en redes neuronales para ajustar los pesos. Funciona propagando el error desde la salida hacia atrás a través de la red, calculando gradientes en cada capa y actualizando los pesos utilizando un algoritmo de optimización como el gradiente descendente. Esto permite minimizar la función de pérdida y mejorar las predicciones del modelo.
+### 6. **¿Qué es una función de pérdida y por qué es importante?**
+Una **función de pérdida** es una medida de cuán mal está el modelo en sus predicciones, comparando las predicciones del modelo con los valores reales. El objetivo durante el entrenamiento es **minimizar la función de pérdida**. Las funciones comunes son **MSE (Mean Squared Error)** para regresión y **Cross-Entropy Loss** para clasificación.
+### 7. **¿Qué es el gradiente descendente?**
+El **gradiente descendente** es un algoritmo de optimización utilizado para minimizar la función de pérdida. El algoritmo ajusta los parámetros (pesos) del modelo en la dirección opuesta al gradiente de la función de pérdida, lo que reduce el error. Este proceso se repite hasta que el modelo converja a los valores óptimos o se alcance un número máximo de iteraciones.
+### 8. **¿Qué es el overfitting (sobreajuste)?**
+El **overfitting** ocurre cuando un modelo aprende demasiado bien los detalles y el ruido de los datos de entrenamiento, a costa de perder su capacidad para generalizar a nuevos datos. El modelo tiene un bajo error en el conjunto de entrenamiento pero un alto error en el conjunto de prueba. Se puede mitigar usando técnicas de regularización, como el **dropout** o la **normalización de batch**.
+### 9. **¿Qué es el underfitting (subajuste)?**
+El **underfitting** ocurre cuando el modelo no es lo suficientemente complejo para aprender los patrones subyacentes de los datos, lo que resulta en un bajo rendimiento tanto en el conjunto de entrenamiento como en el de prueba. Se puede evitar aumentando la complejidad del modelo, usando más capas o neuronas, o entrenando por más épocas.
+### 10. **¿Qué son las capas ocultas en una red neuronal?**
+Las **capas ocultas** son las capas intermedias entre la entrada y la salida en una red neuronal. Son responsables de aprender representaciones complejas de los datos. Cada capa oculta transforma las activaciones de la capa anterior de una manera no lineal, lo que le permite a la red aprender patrones más complejos.
+### 11. **¿Qué es la normalización de datos y por qué es útil?**
+La **normalización de datos** es el proceso de transformar las características de entrada para que tengan una escala similar, por ejemplo, mediante la **escalación** a un rango de 0 a 1 o la **normalización estándar** para que tengan media cero y desviación estándar uno. Esto es útil porque facilita el entrenamiento de redes neuronales, ayudando a que los gradientes no se desborden o se anulen, acelerando la convergencia.
+### 12. **¿Qué es el dropout y cómo ayuda a evitar el sobreajuste?**
+El **dropout** es una técnica de regularización que consiste en **desactivar aleatoriamente un porcentaje de neuronas** durante cada paso de entrenamiento. Esto previene que el modelo dependa demasiado de ciertas características y ayuda a evitar el sobreajuste, ya que obliga a la red a aprender representaciones más generales y robustas.
+### 13. **¿Qué es la inicialización de pesos y por qué es importante?**
+La **inicialización de pesos** es el proceso de establecer los valores iniciales de los pesos de la red neuronal antes de comenzar el entrenamiento. Una mala inicialización puede llevar a problemas como el **desvanecimiento del gradiente** o **explosión del gradiente**, que dificultan el entrenamiento. Técnicas como la inicialización **Xavier** o **He** ayudan a establecer valores adecuados para los pesos.
+### 14. **¿Qué es un modelo de red neuronal convolucional (CNN)?**
+Un **modelo de red neuronal convolucional (CNN)** es una arquitectura especializada en **procesamiento de imágenes y datos estructurados en grid**. Utiliza **capas convolucionales** para extraer características locales, seguido de **capas de pooling** para reducir la dimensionalidad, y finalmente **capas densas** para la clasificación. Las CNN son muy eficaces para tareas como reconocimiento de imágenes, clasificación y detección de objetos.
+### 15. **¿Qué es el max pooling en una CNN?**
+**Max pooling** es una operación utilizada en redes neuronales convolucionales para reducir la dimensionalidad de los mapas de activación, tomando el valor máximo de un grupo de píxeles en una ventana deslizante. Esto ayuda a reducir el número de parámetros y la carga computacional, además de introducir **invariancia** a pequeñas translaciones en la imagen.
+### 16. **¿Qué es la función ReLU y por qué es tan popular?**
+La **función ReLU (Rectified Linear Unit)** es una función de activación que devuelve el valor de entrada si es positivo y cero si es negativo. ReLU es popular porque introduce una **no linealidad** y permite que los gradientes no desaparezcan, lo que facilita el entrenamiento de redes neuronales profundas. Además, es computacionalmente eficiente.
+### 17. **¿Qué es una red neuronal recurrente (RNN) y en qué se diferencia de una red neuronal estándar?**
+Una **red neuronal recurrente (RNN)** es un tipo de red neuronal diseñada para trabajar con datos secuenciales, como texto o series temporales. A diferencia de las redes neuronales tradicionales, las RNN tienen **conexiones internas** que les permiten **recordar información de pasos anteriores** y usarla en pasos posteriores, lo que les permite capturar dependencias temporales.
+### 18. **¿Qué es un optimizador en redes neuronales y cuál es su propósito?**
+Un **optimizador** es un algoritmo que ajusta los pesos de la red neuronal durante el entrenamiento para minimizar la función de pérdida. Los optimizadores como **SGD (Stochastic Gradient Descent)**, **Adam**, y **RMSProp** utilizan técnicas basadas en el gradiente para actualizar los pesos, y cada uno tiene características que influyen en la velocidad de convergencia y en la estabilidad del entrenamiento.
+### 19. **¿Qué es la técnica de normalización por lotes (Batch Normalization) y cómo mejora el entrenamiento?**
+La **normalización por lotes** es una técnica que normaliza las activaciones de cada capa, asegurando que tengan media cero y desviación estándar uno. Esto ayuda a estabilizar el proceso de entrenamiento, mejora la convergencia y reduce la dependencia de la inicialización de los pesos. Batch normalization también puede actuar como una forma de regularización.
+### 20. **¿Qué son los modelos generativos y cómo se usan en redes neuronales?**
+Los **modelos generativos** son redes neuronales que aprenden a **generar datos nuevos** similares a los datos de entrenamiento. Los ejemplos más comunes son los **Generative Adversarial Networks (GANs)** y **Variational Autoencoders (VAEs)**, que se utilizan para tareas como la generación de imágenes, música y texto. Estos modelos son útiles cuando el objetivo es crear nuevos ejemplos de datos realistas basados en los patrones aprendidos.
+### 21. **¿Qué es una capa densa (fully connected) en una red neuronal?**
+Una **capa densa** o **fully connected** es una capa en la que cada neurona está conectada a todas las neuronas de la capa anterior. Esta capa es esencial para hacer la clasificación o la regresión, ya que permite que la red procese y combine información proveniente de todas las características. En términos matemáticos, cada salida de una capa densa es el resultado de la suma ponderada de todas las entradas y se pasa por una función de activación.
+### 22. **¿Qué es la técnica de early stopping y cómo ayuda en el entrenamiento de redes neuronales?**
+La **técnica de early stopping** es un método para evitar el sobreajuste durante el entrenamiento. Consiste en **detener el entrenamiento cuando el rendimiento del modelo en el conjunto de validación deja de mejorar** después de un número determinado de iteraciones (épocas). Esto ayuda a evitar que el modelo aprenda demasiado sobre los datos de entrenamiento y pierda capacidad de generalización.
+### 23. **¿Cuál es la diferencia entre clasificación binaria y clasificación multiclase?**
+La **clasificación binaria** es un tipo de problema en el que el objetivo es clasificar las entradas en **dos clases** (por ejemplo, spam vs no spam). En cambio, la **clasificación multiclase** involucra más de dos clases, y el modelo debe asignar cada entrada a una de esas clases. El enfoque de salida también cambia, donde en clasificación multiclase se usa típicamente una capa de salida con tantas neuronas como clases haya.
+### 24. **¿Qué es la función de activación sigmoidal y en qué tipo de problemas se utiliza más comúnmente?**
+La **función sigmoidal** es una función matemática que produce una salida entre 0 y 1, lo que la hace útil para problemas de clasificación binaria. Se define como f(x)=11+e−xf(x) = \frac{1}{1 + e^{-x}}f(x)=1+e−x1​. Su principal aplicación es en la capa de salida de modelos de clasificación binaria, ya que la salida puede interpretarse como una probabilidad.
+### 25. **¿Qué es la inicialización de He y cuándo se debe usar?**
+La **inicialización de He** es una técnica para inicializar los pesos de las redes neuronales de manera que se eviten problemas como el desvanecimiento del gradiente, especialmente cuando se usa la función de activación ReLU. La técnica consiste en inicializar los pesos de manera que su varianza sea 2n\frac{2}{n}n2​, donde nnn es el número de neuronas en la capa anterior. Esta inicialización es especialmente útil en redes profundas con activaciones ReLU.
+### 26. **¿Qué es un optimizador como Adam y cuáles son sus ventajas frente a SGD?**
+**Adam** (Adaptive Moment Estimation) es un optimizador basado en el gradiente descendente que adapta la tasa de aprendizaje de cada parámetro individualmente, usando los momentos de primer y segundo orden (media y varianza). A diferencia del **SGD**, que utiliza una tasa de aprendizaje fija, Adam ajusta dinámicamente las tasas de aprendizaje y es generalmente más rápido y eficiente en la convergencia, lo que lo hace adecuado para entrenar redes profundas.
+### 27. **¿Qué es el **bias** en una neurona y cuál es su función?**
+El **bias** es un valor adicional agregado a la entrada de una neurona antes de pasar por la función de activación. Su función es permitir que la red ajuste la salida sin depender completamente de las entradas, lo que le permite aprender patrones más complejos. El bias actúa como un parámetro adicional que la red puede ajustar durante el entrenamiento para mejorar las predicciones.
+### 28. **¿Qué son los gradientes y cómo se usan para actualizar los pesos?**
+Los **gradientes** son las derivadas de la función de pérdida con respecto a los parámetros del modelo (pesos). El **gradiente descendente** usa estos gradientes para determinar en qué dirección deben ajustarse los pesos para reducir la función de pérdida. Cuanto mayor sea el gradiente, mayor será el ajuste del peso en la iteración actual. Los gradientes se calculan mediante la retropropagación, y luego los pesos se ajustan en la dirección opuesta al gradiente para minimizar el error.
+### 29. **¿Qué es la validación cruzada (cross-validation) y cómo ayuda a mejorar los modelos?**
+La **validación cruzada** es una técnica utilizada para evaluar el rendimiento de un modelo dividiendo el conjunto de datos en varias partes (o "folds"). En cada iteración, el modelo se entrena con algunas de las partes y se valida con otras. Esto permite obtener una evaluación más robusta y precisa del rendimiento del modelo, reduciendo el sesgo de la evaluación y ayudando a evitar el sobreajuste a un conjunto de datos específico.
+### 30. **¿Qué es la técnica de L2 regularization (Ridge) y cómo ayuda a prevenir el sobreajuste?**
+La **regularización L2** (también conocida como **Ridge**) es una técnica utilizada para prevenir el sobreajuste al agregar un término de penalización a la función de pérdida, que es proporcional al cuadrado de los pesos del modelo. Esto penaliza a los modelos con grandes pesos, lo que impide que el modelo se ajuste demasiado a los datos de entrenamiento y mejora su capacidad de generalización en datos no vistos.
+
+# 2. Preguntas complejas
+### 1. **¿Qué pasa si entrenamos una red neuronal con demasiadas capas ocultas sin la cantidad adecuada de datos?**
+Entrenar una red neuronal con demasiadas capas y pocos datos puede llevar al **sobreajuste** (overfitting). Las redes profundas requieren grandes cantidades de datos para generalizar bien. Si no hay suficientes datos, la red aprenderá patrones específicos del conjunto de entrenamiento, perdiendo capacidad de generalización. La solución sería usar técnicas de regularización como **dropout** o **aumentar el tamaño del conjunto de datos** a través de **data augmentation**.
+### 2. **¿Por qué el problema del vanishing gradient afecta a redes neuronales profundas y qué se puede hacer para mitigar este problema?**
+El problema del **vanishing gradient** ocurre cuando los gradientes se vuelven muy pequeños a medida que se propagan hacia las capas anteriores de la red. Esto dificulta el ajuste de los pesos de las primeras capas, ya que las actualizaciones de los pesos son mínimas. Este problema es más común en funciones de activación como **sigmoide** o **tanh**. Para mitigarlo, se recomienda usar funciones de activación como **ReLU**, que no sufren de este problema, o usar técnicas como **Batch Normalization** y **inicialización de He**.
+### 3. **Si una red neuronal con una sola capa oculta tiene un desempeño inferior que una red con muchas capas ocultas, ¿por qué podría estar ocurriendo esto?**
+Esto podría deberse a que el problema es **no linealmente separable**, lo que significa que una sola capa no es suficiente para capturar las complejidades de los datos. Las redes profundas, con muchas capas ocultas, pueden aprender representaciones más complejas y no lineales de los datos, lo que mejora la capacidad de clasificación y la precisión del modelo.
+### 4. **En un problema de clasificación multiclase, ¿por qué usar la función de activación softmax en la capa de salida?**
+La función **softmax** convierte los valores de salida de la red en probabilidades, lo que facilita la interpretación de las predicciones. En clasificación multiclase, softmax asigna una probabilidad a cada clase, y la clase con la probabilidad más alta es la predicción final. Esto permite que el modelo pueda predecir de manera probabilística y facilite el uso de **cross-entropy loss** para el entrenamiento.
+### 5. **Si usas una tasa de aprendizaje muy alta durante el entrenamiento de una red neuronal, ¿qué problemas podrías enfrentar y cómo los solucionarías?**
+Una tasa de aprendizaje demasiado alta puede hacer que el modelo **divergente**, es decir, que los valores de los pesos no se estabilicen, y el modelo no pueda converger hacia un mínimo de la función de pérdida. El **algoritmo de optimización** podría saltarse los puntos óptimos, causando una mala convergencia. La solución es **reducir la tasa de aprendizaje** o utilizar **técnicas como learning rate decay** o **optimización adaptativa** (por ejemplo, Adam).
+### 6. **¿Por qué la regularización L1 puede ser más útil que L2 en algunos casos?**
+
+La **regularización L1** tiende a producir modelos más **sparsos**, es decir, con más pesos iguales a cero. Esto es útil cuando se desea **seleccionar características importantes** y eliminar características irrelevantes del modelo. L2, en cambio, tiende a distribuir la penalización más uniformemente, lo que puede llevar a que todos los pesos disminuyan, pero sin eliminar ninguno por completo.
+### 7. **En el caso de que un modelo esté sobreajustado (overfitting), ¿qué acciones puedes tomar para mejorar el modelo?**
+Para mitigar el sobreajuste, se pueden aplicar varias técnicas:
+
+- **Regularización L1/L2** para reducir el impacto de las características menos importantes.
+    
+- **Dropout** para evitar que el modelo dependa demasiado de ciertas neuronas.
+    
+- **Aumento de datos (data augmentation)** para generar más variabilidad en los datos de entrenamiento.
+    
+- **Reducción de la complejidad del modelo**, reduciendo el número de capas o neuronas en la red.
+### 8. **Si al aplicar el gradiente descendente no ves mejoras significativas en el modelo después de varias iteraciones, ¿qué podría estar sucediendo?**
+Esto podría ocurrir por varias razones, como:
+
+- La tasa de aprendizaje puede ser demasiado **baja**, lo que ralentiza las actualizaciones de los pesos.
+    
+- El modelo podría estar atrapado en un **mínimo local**, lo que significa que no está convergiendo al mínimo global. En este caso, se podría intentar **cambiar el optimizador** o usar una tasa de aprendizaje **adaptativa**.
+    
+- También puede ser un signo de que la **función de pérdida** está mal definida o que la red no tiene suficiente capacidad para modelar los datos.
+### 9. **¿Qué pasa si se utiliza un modelo muy complejo para un conjunto de datos pequeño?**
+Un modelo muy complejo puede **sobreajustarse** a los datos pequeños, aprendiendo ruido o patrones irrelevantes. Esto resulta en un modelo que tiene un bajo error en el conjunto de entrenamiento, pero un alto error en el conjunto de prueba, ya que no puede generalizar bien a nuevos datos. En estos casos, se recomienda reducir la complejidad del modelo o aumentar el tamaño del conjunto de datos.
+### 10. **¿Cuál es la importancia de la inicialización adecuada de pesos y cómo puede afectar el rendimiento de la red?**
+La **inicialización adecuada de los pesos** es crucial para que el entrenamiento de la red neuronal sea eficiente. Si los pesos se inicializan demasiado grandes o pequeños, puede causar que los gradientes exploten o se desvanecen, lo que lleva a que la red no aprenda correctamente. Técnicas como **Xavier** o **He initialization** aseguran que los pesos comiencen en un rango adecuado para permitir que el entrenamiento sea estable y eficiente.
+### 11. **Si una red neuronal tiene muchas capas pero el rendimiento sigue siendo bajo, ¿qué se podría hacer para mejorar el rendimiento?**
+Si el rendimiento es bajo a pesar de tener muchas capas, puede ser útil probar:
+
+- **Ajustar la tasa de aprendizaje** para asegurarse de que el modelo pueda aprender adecuadamente.
+    
+- **Aplicar técnicas de regularización**, como dropout o L2 regularization, para evitar el sobreajuste.
+    
+- **Usar arquitecturas más avanzadas**, como **ResNets** (residual networks) que ayudan a entrenar redes más profundas sin sufrir de problemas como el desvanecimiento del gradiente.
+### 12. **¿Qué significa el término "underfitting" y cómo se puede solucionar?**
+El **underfitting** ocurre cuando un modelo es demasiado simple para aprender los patrones subyacentes de los datos. Esto puede suceder si el modelo no tiene suficiente capacidad (pocas neuronas, capas, etc.) o si no se ha entrenado el tiempo suficiente. Para solucionarlo, se puede aumentar la **complejidad del modelo**, entrenarlo por más **épocas**, o ajustar los **hiperparámetros**.
+### 13. **¿Por qué las redes neuronales profundas son más potentes que las redes superficiales?**
+Las redes neuronales profundas pueden aprender representaciones jerárquicas más complejas de los datos. Las **capas adicionales** permiten que el modelo capture patrones de alto nivel a partir de características más simples extraídas por las capas anteriores, lo que hace que las redes profundas sean más capaces de resolver problemas complejos, especialmente en tareas como **reconocimiento de imágenes** o **procesamiento de lenguaje natural**.
+### 14. **¿Qué sucede si se utiliza una función de activación sigmoidal en todas las capas de una red muy profunda?**
+La **función sigmoidal** puede causar problemas de **vanishing gradients** en redes profundas, lo que significa que los gradientes de la función de pérdida se vuelven muy pequeños, haciendo que el entrenamiento sea muy lento o incluso deteniéndose en capas más profundas. Esto es especialmente problemático en redes con muchas capas. Usar **ReLU** o variantes de ReLU es generalmente más efectivo.
+### 15. **¿Qué se entiende por "aprendizaje supervisado" y cómo se diferencia del "aprendizaje no supervisado"?**
+El **aprendizaje supervisado** implica entrenar un modelo con datos etiquetados, es decir, los datos de entrada tienen una respuesta correcta asociada (como etiquetas de clase en clasificación). El **aprendizaje no supervisado**, por otro lado, no usa etiquetas, y el modelo busca estructuras o patrones ocultos en los datos (como **clustering** o **reducción de dimensionalidad**).
+### 16. **¿Qué son los optimizadores adaptativos y cómo mejoran el entrenamiento de redes neuronales?**
+Los **optimizadores adaptativos**, como **Adam** o **RMSProp**, ajustan las tasas de aprendizaje de manera automática para cada parámetro según el gradiente. Esto mejora la eficiencia del entrenamiento, ya que permite que los parámetros con gradientes más grandes tengan tasas de aprendizaje más pequeñas y viceversa, lo que ayuda a mejorar la convergencia y a manejar gradientes ruidosos.
+### 17. **¿Por qué puede ser problemático tener una función de activación en la capa de salida que no esté alineada con la tarea?**
+Si la función de activación no es apropiada para la tarea, el modelo puede producir resultados incorrectos o ineficaces. Por ejemplo, para clasificación binaria, la capa de salida debe usar una función sigmoidal, mientras que para clasificación multiclase, se usa softmax. Si se usan funciones incorrectas, como **ReLU** en la salida de clasificación, el modelo no puede generar probabilidades correctas, lo que impide la correcta interpretación de las salidas.
+### 18. **¿Qué podría indicar un aumento significativo de la función de pérdida durante el entrenamiento?**
+Un aumento en la función de pérdida podría indicar que la tasa de aprendizaje es demasiado **alta**, lo que causa que el modelo haga actualizaciones de pesos demasiado grandes y no pueda converger de manera efectiva. También podría indicar un **sobreajuste** o que el modelo está aprendiendo patrones ruidosos de los datos de entrenamiento. Una posible solución sería **reducir la tasa de aprendizaje** o usar **early stopping**.
+### 19. **¿Qué significa que un modelo de red neuronal "converja" y cómo se mide?**
+Cuando un modelo **converge**, significa que las actualizaciones de los pesos y la función de pérdida se estabilizan después de varias iteraciones, indicando que el modelo ha encontrado un buen conjunto de parámetros. Se mide observando si el valor de la función de pérdida deja de disminuir o disminuye muy lentamente con el tiempo.
+### 20. **Si utilizas un optimizador que no actualiza adecuadamente los pesos, ¿cómo puedes detectar que algo anda mal?**
+Si los pesos no se actualizan correctamente, es posible que el **error no disminuya** o que disminuya muy lentamente a pesar de muchas iteraciones. Puedes verificar esto observando el comportamiento de la función de pérdida durante el entrenamiento. También puedes intentar cambiar de **optimización** (por ejemplo, de SGD a Adam) o revisar la **tasa de aprendizaje**.
+
+# 3. Preguntas PEP

@@ -69,7 +69,7 @@ Cada vez que pasa un lote por la red y se actualizan los parámetros se conoce c
 ### Época (epoch)
 Paso completo de todo el conjunto de datos por la red. Una época es igual al número de iteraciones necesarias para completaar el tamaño del conjunto de entrenamiento.
 
-# Gradiente descendiente
+# Gradiente descendente
 
 ## Perceptrón Multicapa
 Combina perceptrones, organizando las neuronas en capas. Por ende, una o más capas ocultas transforman la entrada para facilitar la clasificación.
@@ -102,7 +102,7 @@ Es un subconjunto completo de datos de entrenamiento que se utiliza en una únic
 
 ### Iteration (Iteración)
 Una única actualización de los parámetros del modelo durante el proceso de entrenamiento. 
-Ocurre cuando pasa un lote completo , los parámetros (pesos) son actualizadas cada vez que pasa un batch.
+Ocurre cuando pasa un lote completo, los parámetros (pesos) son actualizadas cada vez que pasa un batch.
 
 ### Epoch (Época)
 Ocurre cuando pasan todos los batch. 
@@ -181,3 +181,35 @@ Las salidas de una capa se convierten en las entradas de la siguiente. Esto pued
 ### Data Augmentation
 Se trata de hacer transformaciones a la imagen (voltear, rotar, agrandar).
 
+# Modelos atencionales
+Modelos diseñados para enfocarse en las partes más relevantes de la entrada, es especialmente útil en secuencias (texto, audio, etc.).
+
+## Mecanismo de atención
+Evalúa qué partes de la entrada deben recibir más peso. Es decir, se le da una atención distinta a cada uno. 
+
+## Arquitectura típica
+- Encoder-Decoder + Módulo de atención
+- Traansformers elimina el uso de RNNs y usa sólo atención
+
+# Modelos generativos
+Modelos capaces de generar nuevos datos similares a los datos de entrenamiento. 
+
+## Redes generativas adversarias
+Se necesita tener el generador y el discriminador.
+
+### Generador
+Generar una imagen falsa en base a una imagen con ruido. 
+### Discriminador
+Determina si la imagen es real o fake.
+
+
+## Modelos comunes
+### Autoencoders (AE)
+Comprimen los datos y los reconstruyen, se utiliza para reducción de dimensionalidad, denoising, y generación de imágenes simples.
+### Variational Autoencoders (VAE)
+Es una extensión probabilística de AE y permiten generar nuevas muestras al muestrear desde una distribución latente.
+### GANs (Generative Adversarial Networks)
+Se tienen dos redes: Generador y Discriminador compiten entre sí. El generador intenta crear datos falsos que parezcan reales, mientras que el discriminador intenta detectar cuáles son reales o falsos. Es usado para generación de imágenes realistas.
+
+# Por ver
+- Gradiente Descendente Estocástico
