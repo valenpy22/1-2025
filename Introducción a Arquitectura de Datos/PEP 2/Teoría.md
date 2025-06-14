@@ -75,3 +75,17 @@ Responsable legal de los datos, debe responder por posible robo de información.
 3. **Seguridad y privacidad:** El CDO y los arquitectos de seguridad trabajan juntos para implementar medidas de seguridad que protejan los datos sensibles. Esto incluye encriptación, acceso controlado y monitoreo continuo.
 4. **Escalabilidad y rendimiento**: El CDO y el equipo de Arquitectura planifican para el crecimiento futuro, asegurando que la infraestructura de datos pueda escalar con el aumento de volúmenes de datos y usuarios.
 5. **Monitoreo y mejora continua:** Juntos, el CDO y el equipo de arquitectura establecen mecanismos para el monitoreo continuo del rendimiento de los sistemas de datos y promueven mejoras continuas basadas en feedback y nuevas tecnologías. 
+
+## Claves para la implementación de una política
+### Definición del alcance del SGSI
+### Elaboración de políticas claras y aplicables
+### Formación y concienciación
+
+## Glosario de negocios
+Es un listado de definiciones de datos y sus relaciones entre ellos; tal que enlaza los términos con entidades del negocio; permitiendo claridad a los términos y minimiza inconsistencia además de malentendidos dentro y entre el negocio y desarrollo.
+Gracias a lo anterior es que entregan contexto a los activos de los datos por la semántica que entregan, y son base para la calidad de datos.
+El glosario va dentro del catálogo.
+
+## Catálogo de datos
+Herramienta o sistema que permite organizar, describir y administrar los datos de una organización de manera estructurada. Su objetivo principal es facilitar el acceso, la búsqueda y la comprensión de los datos disponibles, asegurando su calidad, gobernanza y seguridad. Es la descripción técnica del dato.
+

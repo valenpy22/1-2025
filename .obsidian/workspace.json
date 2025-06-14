@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introducción a Arquitectura de Datos/PEP 2/Teoría.md",
+                "file": "Introducción a Arquitectura de Datos/PEP 2/Preguntas control.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Teoría"
+              "title": "Preguntas control"
             }
           },
           {
@@ -198,6 +198,8 @@
   },
   "active": "2d6abb6800899340",
   "lastOpenFiles": [
+    "Introducción a Arquitectura de Datos/PEP 2/Resumen lectura.md",
+    "Introducción a Arquitectura de Datos/PEP 2/Preguntas control.md",
     "Aprendizaje Automático/PEP 2/Teoría.md",
     "Aprendizaje Automático/PEP 2/Preguntas PEP.md",
     "Introducción a Arquitectura de Datos/PEP 2/Teoría.md",
@@ -239,8 +241,6 @@
     "Introducción a Arquitectura de Datos/4. Clase 26-03.md",
     "Introducción a Arquitectura de Datos/2. Clase 19-03.md",
     "Aprendizaje Automático/Imágenes/Pasted image 20250415101843.png",
-    "Seguridad en Redes/Ayudantías.md",
-    "Ciberseguridad/Estudio propio/Guía de Hacking Ético.md",
     "Gobernanza y Gestión TI/GYGTI 202501 - Anexo 02 - Estructuras Organizativas.pdf",
     "Gobernanza y Gestión TI/GYGTI 202501 - Anexo 01 - Metas de la Empresa y de Alineamiento.pdf",
     "Gobernanza y Gestión TI/GYGTI 202501 - 03 - Entregar, Dar Servicio y Soporte.pdf"
